@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOMEPAGEe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>URL SHORTNER</h1>
+            <% if (locals.yourname) { %>
+                <h2>welcome <%= locals.yourname %></h2>
+                         
+                <% } else { %>
+                 <h3>please login to use this feature</h3>
+
+            <% } %>
+            
+        </div>
+        <div class="main">
+            <form method="post" action="/api/url">
+                <label for="name">enter your URL : </label>
+                <input id="inputurl" type="text" name="url" placeholder="https://example.com">
+                <button id="submit">GENERATE</button>
+            </form>
+        </div>
+        <div class="showurl">
+            <h2>your new url</h2>
+            <% if (locals.urls) { %>
+                <p>http://localhost:9000/api/url/<%=locals.urls%></p>
+            <% } %>
+        </div>
+    </div>
+    
+</body>
+</html>
