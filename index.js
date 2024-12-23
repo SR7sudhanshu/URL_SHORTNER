@@ -12,7 +12,7 @@ const staticrouter=require("./routes/staticrouter");
 const userrouter=require("./routes/user");
 const cookieParser = require("cookie-parser");
 const authmiddle=require("./middlewares/authentication");
-const {checkauth}=require("./middlewares/checkforname")
+const {checkauth}=require("./middlewares/checkforname");
 
 
 //conncetingg mongoose

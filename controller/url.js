@@ -12,7 +12,7 @@ async function generateshortURL(req,res){
    await urlmodel.create({
         SHORT_ID : short_Id,
         REDIRECTED_LINK : body.url,
-        TOTALCLICKS : []
+        TOTALCLICKS : [],
    })
    const userID=req.cookies.uid;
    const user=getuser(userID);
