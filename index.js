@@ -7,7 +7,7 @@ const urlmodel=require("./model/url");
 
 
 const DB=require("./config/config");
-const router = require("./routes/url");
+const urlrouter = require("./routes/url");
 const staticrouter=require("./routes/staticrouter");
 const userrouter=require("./routes/user");
 const cookieParser = require("cookie-parser");
@@ -36,7 +36,7 @@ app.use(cookieParser());
 
 //routes
 app.use("/",checkauth,staticrouter);
-app.use("/api",authmiddle.loginuseronly ,router);
+app.use("/api",authmiddle.loginuseronly,urlrouter);
 app.use("/user",userrouter);
 
 
