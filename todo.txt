@@ -1,2 +1,1 @@
-design a URL shorterner
-
+URL : enter your URL

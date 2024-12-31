@@ -16,7 +16,7 @@ const {checkauth}=require("./middlewares/checkforname");
 
 
 //conncetingg mongoose
- DB.connectDB("mongodb://localhost:27017/urlshorterner");
+DB.connectDB("mongodb://localhost:27017/urlshorterner");
 
 
  //HOMEPAGEG

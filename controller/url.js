@@ -7,7 +7,7 @@ async function generateshortURL(req,res){
    const body =req.body;
    const short_Id=shortId();
    
-   if(!body.url) res.end("please enter a URL");
+   if(!body.url) res.end("please enter a URL go back with the back button");
 
    await urlmodel.create({
         SHORT_ID : short_Id,
